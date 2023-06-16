@@ -13,7 +13,8 @@ function wpedon_options($atts) {
 			'id'		=> '',
 			'align' 	=> '',
 			'widget' 	=> '',
-			'name' 		=> ''
+			'name' 		=> '',
+			'image'         => ''
 		), $atts);
 			
 		$post_id = $atts['id'];
@@ -355,6 +356,11 @@ function wpedon_options($atts) {
 	} else {
 		$width = "220px";
 	}
+
+        // image
+        if (array_key_exists('image', $atts) && ($atts['image'] != "")) {
+                $img = $atts['image'];
+        }
 	
 	// return url
 	$return = "";
